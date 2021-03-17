@@ -1,0 +1,51 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="StartButtonColour" parent="Widget.MaterialComponents.Button">
+        <!-- Customize your theme here. -->
+        <item name="materialThemeOverlay">@style/GreenButtonThemeOverlay</item>
+    </style>
+
+    <style name="GreenButtonThemeOverlay">
+        <item name="colorPrimary">#00FF00</item>
+    </style>
+
+    <style name="PauseButtonColour" parent="Widget.MaterialComponents.Button">
+        <!-- Customize your theme here. -->
+        <item name="materialThemeOverlay">@style/OrangeButtonThemeOverlay</item>
+    </style>
+
+    <style name="OrangeButtonThemeOverlay">
+        <item name="colorPrimary">#FFA500</item>
+    </style>
+
+    <style name="StopButtonColour" parent="Widget.MaterialComponents.Button">
+        <!-- Customize your theme here. -->
+        <item name="materialThemeOverlay">@style/RedButtonThemeOverlay</item>
+    </style>
+
+    <style name="RedButtonThemeOverlay">
+        <item name="colorPrimary">#FF0000</item>
+    </style>
+
+    <style name="HeaderBar">
+        <item name="android:background">@color/colorMenuBackground</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

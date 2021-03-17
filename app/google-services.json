@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "791554139201",
+    "project_id": "letsrun-2135e",
+    "storage_bucket": "letsrun-2135e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791554139201:android:7594822c2ec656855612c0",
+        "android_client_info": {
+          "package_name": "com.example.LetsRun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791554139201-kfu0k4es70fhfrfn6jc41450cht5dbq8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.LetsRun",
+            "certificate_hash": "196b099a7c96ea0201be5d5bd73e3b32a9dd0f11"
+          }
+        },
+        {
+          "client_id": "791554139201-mg01gmuumc72l0nji628f7eeoej8dq3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV7SoVHUclm5mhCJTVy4GVJWY_J3iDnAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791554139201-mg01gmuumc72l0nji628f7eeoej8dq3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

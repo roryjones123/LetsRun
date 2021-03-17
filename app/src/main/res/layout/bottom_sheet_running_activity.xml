@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffffff"
+    android:paddingBottom="15dp"
+    android:id="@+id/bottomSheet"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="120dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/distanceIntView"
+        android:textSize="20sp"
+        >
+    </TextView>
+
+
+    <ImageView
+        android:id="@+id/distanceIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_public_24"
+        app:layout_constraintEnd_toStartOf="@+id/vertical4"
+        app:layout_constraintStart_toStartOf="@+id/vertical2"
+        app:layout_constraintTop_toTopOf="@+id/guide3">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/distanceIntView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/distanceTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distanceIcon">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/durationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical2"
+        app:layout_constraintStart_toEndOf="@id/vertical1"
+        app:layout_constraintTop_toBottomOf="@id/durationIntView">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/durationIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_timer_24"
+        app:layout_constraintEnd_toStartOf="@+id/vertical2"
+        app:layout_constraintStart_toStartOf="@+id/vertical1"
+        app:layout_constraintTop_toTopOf="@+id/guide1">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/durationIntView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical2"
+        app:layout_constraintStart_toStartOf="@+id/vertical1"
+        app:layout_constraintTop_toBottomOf="@+id/durationIcon">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/paceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pace"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical3"
+        app:layout_constraintStart_toEndOf="@id/vertical4"
+        app:layout_constraintTop_toBottomOf="@id/paceIntView">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/paceIcon2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_av_timer_24"
+        app:layout_constraintEnd_toStartOf="@+id/vertical3"
+        app:layout_constraintStart_toStartOf="@+id/vertical4"
+        app:layout_constraintTop_toTopOf="@+id/guide1">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/paceIntView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/paceIcon2"
+        app:layout_constraintEnd_toStartOf="@+id/vertical3"
+        app:layout_constraintStart_toStartOf="@+id/vertical4"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/caloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical3"
+        app:layout_constraintStart_toEndOf="@id/vertical4"
+        app:layout_constraintTop_toBottomOf="@id/caloriesIntView">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/calorieIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_whatshot_24"
+        app:layout_constraintEnd_toStartOf="@+id/vertical3"
+        app:layout_constraintStart_toStartOf="@+id/vertical4"
+        app:layout_constraintTop_toTopOf="@+id/guide2">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/caloriesIntView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/caloriesTextView"
+        app:layout_constraintEnd_toStartOf="@+id/vertical3"
+        app:layout_constraintStart_toStartOf="@+id/vertical4"
+        app:layout_constraintTop_toBottomOf="@+id/calorieIcon">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/averagePaceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average Pace"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical2"
+        app:layout_constraintStart_toEndOf="@id/vertical1"
+        app:layout_constraintTop_toBottomOf="@id/averagePaceIntView">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/paceIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_access_time_24"
+        app:layout_constraintEnd_toStartOf="@+id/vertical2"
+        app:layout_constraintStart_toStartOf="@+id/vertical1"
+        app:layout_constraintTop_toTopOf="@+id/guide2">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/averagePaceIntView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical2"
+        app:layout_constraintStart_toStartOf="@+id/vertical1"
+        app:layout_constraintTop_toBottomOf="@+id/paceIcon"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".03"
+        android:orientation="horizontal"
+        >
+    </androidx.constraintlayout.widget.Guideline>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".40"
+        android:orientation="horizontal"
+        >
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".760"
+        android:orientation="horizontal"
+        >
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".10"
+        android:orientation="vertical"
+        >
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".40"
+        android:orientation="vertical"
+        >
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".90"
+        android:orientation="vertical"
+        >
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".60"
+        android:orientation="vertical"
+        >
+    </androidx.constraintlayout.widget.Guideline>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

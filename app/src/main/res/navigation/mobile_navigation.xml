@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/run_fragment_menu">
+
+    <fragment
+        android:id="@+id/run_fragment_menu"
+        android:name="com.example.LetsRun.RunningFragment.RunningFragment"
+        android:label="Start a Run"
+        tools:layout="@layout/running_fragment_activity"/>
+
+    <fragment
+        android:id="@+id/log_fragment_menu"
+        android:name="com.example.LetsRun.LogFragment.LogFragment"
+        android:label="Activity Log"
+        tools:layout="@layout/fragment_second" />
+
+
+</navigation>

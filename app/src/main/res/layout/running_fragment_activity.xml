@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:weightSum="10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_weight="8.5"
+        app:layout_constraintBottom_toTopOf="@id/verticalForButton1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        >
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    <include
+        layout="@layout/bottom_sheet_running_activity"
+        />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:background="#ffffff"
+        >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalForButton1"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalForButton2"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalForButton3"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalForButton4"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalForButton5"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalForButton6"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalForButton1"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        </androidx.constraintlayout.widget.Guideline>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalForButton2"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </androidx.constraintlayout.widget.Guideline>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startButton"
+            style="@style/StartButtonColour"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Start"
+            android:textColor="#ffffff"
+            android:visibility="visible"
+
+            app:layout_constraintBottom_toTopOf="@+id/horizontalForButton2"
+            app:layout_constraintEnd_toStartOf="@+id/verticalForButton2"
+            app:layout_constraintStart_toStartOf="@+id/verticalForButton1"
+            app:layout_constraintTop_toTopOf="@+id/horizontalForButton1">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pauseButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Pause"
+            android:textColor="#ffffff"
+            style="@style/PauseButtonColour"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalForButton2"
+            app:layout_constraintEnd_toStartOf="@+id/verticalForButton2"
+            app:layout_constraintStart_toStartOf="@+id/verticalForButton1"
+            app:layout_constraintTop_toTopOf="@+id/horizontalForButton1"
+            >
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resumeButton"
+            style="@style/StartButtonColour"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Resume"
+            android:textColor="#ffffff"
+            android:visibility="gone"
+
+            app:layout_constraintBottom_toTopOf="@+id/horizontalForButton2"
+            app:layout_constraintEnd_toStartOf="@+id/verticalForButton5"
+            app:layout_constraintStart_toStartOf="@+id/verticalForButton6"
+            app:layout_constraintTop_toTopOf="@+id/horizontalForButton1">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stopButton"
+            style="@style/StopButtonColour"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Stop"
+            android:textColor="#ffffff"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalForButton2"
+            app:layout_constraintEnd_toStartOf="@+id/verticalForButton4"
+            app:layout_constraintStart_toStartOf="@+id/verticalForButton3"
+            app:layout_constraintTop_toTopOf="@+id/horizontalForButton1">
+
+        </com.google.android.material.button.MaterialButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

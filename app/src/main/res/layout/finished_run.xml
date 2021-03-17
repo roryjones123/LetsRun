@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/myBar4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/saveButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_save_24px"
+            android:backgroundTint="#61A9BA"
+            android:contentDescription="save button" />
+
+        <ImageView
+            android:id="@+id/discardButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+
+            android:layout_marginStart="15dp"
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            android:backgroundTint="#DC143C"
+            android:contentDescription="back button" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/runTitle"
+        android:textSize="25sp"
+        android:hint="Add a title here!"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myBar4">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/runNote"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:gravity="top"
+        android:hint="Add a note here!"
+        android:paddingLeft="15dp"
+        android:paddingTop="4dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="7dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#696969"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomSheet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/runTitle">
+
+    </EditText>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#ffffff"
+        android:paddingBottom="32dp"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="100dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hGuideline1">
+
+        <TextView
+            android:id="@+id/distanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/distanceIntView">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/distanceIntView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/distanceTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guide3">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/durationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration"
+
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/vertical2"
+            app:layout_constraintStart_toEndOf="@id/vertical1"
+            app:layout_constraintTop_toBottomOf="@id/durationIntView">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/durationIntView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/durationTextView"
+            app:layout_constraintEnd_toStartOf="@+id/vertical2"
+            app:layout_constraintStart_toStartOf="@+id/vertical1"
+            app:layout_constraintTop_toTopOf="@+id/guide1">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/paceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pace"
+
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/vertical3"
+            app:layout_constraintStart_toEndOf="@id/vertical4"
+            app:layout_constraintTop_toBottomOf="@id/paceIntView">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/paceIntView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/paceTextView"
+            app:layout_constraintEnd_toStartOf="@+id/vertical3"
+            app:layout_constraintStart_toStartOf="@+id/vertical4"
+            app:layout_constraintTop_toTopOf="@+id/guide1">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/caloriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calories"
+
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/vertical3"
+            app:layout_constraintStart_toEndOf="@id/vertical4"
+            app:layout_constraintTop_toBottomOf="@id/caloriesIntView">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/caloriesIntView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/caloriesTextView"
+            app:layout_constraintEnd_toStartOf="@+id/vertical3"
+            app:layout_constraintStart_toStartOf="@+id/vertical4"
+            app:layout_constraintTop_toTopOf="@+id/guide2">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/averagePaceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average Pace"
+
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/vertical2"
+            app:layout_constraintStart_toEndOf="@id/vertical1"
+            app:layout_constraintTop_toBottomOf="@id/averagePaceIntView">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/averagePaceIntView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/averagePaceTextView"
+            app:layout_constraintEnd_toStartOf="@+id/vertical2"
+            app:layout_constraintStart_toStartOf="@+id/vertical1"
+            app:layout_constraintTop_toTopOf="@+id/guide2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".03"></androidx.constraintlayout.widget.Guideline>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".40"></androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".760"></androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".10"></androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".40"></androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".90"></androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".60"></androidx.constraintlayout.widget.Guideline>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hGuideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5">
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hGuideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45">
+
+    </androidx.constraintlayout.widget.Guideline>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

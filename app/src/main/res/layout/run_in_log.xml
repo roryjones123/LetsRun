@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/myBar4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/discardButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/ic_baseline_delete_24"
+            android:backgroundTint="#DC143C"
+            android:contentDescription="save button" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+
+            android:layout_marginStart="15dp"
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            android:backgroundTint="#DC143C"
+            android:contentDescription="back button" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/runTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="Running"
+        android:textColor="#000000"
+        android:paddingTop="2dp"
+        android:paddingBottom="15dp"
+
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/vGuideline1"
+        app:layout_constraintTop_toBottomOf="@+id/myBar4">
+
+    </TextView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/hGuideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/runTitle" />
+
+    <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/hGuideline1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.6"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hGuideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hGuideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hGuideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.91"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hGuideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vGuideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vGuideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.17"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vGuideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vGuideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95">
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <TextView
+        android:id="@+id/durationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        android:text="Duration"
+
+        app:layout_constraintStart_toStartOf="@+id/vGuideline1"
+        app:layout_constraintTop_toBottomOf="@+id/durationChangeableTextView">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/durationChangeableTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="0:00:00"
+        app:layout_constraintStart_toStartOf="@+id/vGuideline1"
+        app:layout_constraintTop_toTopOf="@+id/hGuideline1">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        android:gravity="left"
+        android:text="Distance"
+        app:layout_constraintStart_toStartOf="@+id/vGuideline4"
+        app:layout_constraintTop_toBottomOf="@+id/distanceTextViewChangeable">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/distanceTextViewChangeable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00 km"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/vGuideline4"
+        app:layout_constraintTop_toTopOf="@+id/hGuideline1">
+    </TextView>
+
+    <TextView
+        android:id="@+id/calorieTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories"
+        app:layout_constraintBottom_toTopOf="@+id/hGuideline2"
+        app:layout_constraintStart_toStartOf="@+id/vGuideline2">
+    </TextView>
+
+    <TextView
+        android:id="@+id/avgPaceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avg Pace"
+        app:layout_constraintBottom_toTopOf="@+id/hGuideline3"
+        app:layout_constraintStart_toStartOf="@+id/vGuideline2">
+    </TextView>
+
+    <TextView
+        android:id="@+id/startTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Time"
+        app:layout_constraintBottom_toTopOf="@+id/hGuideline5"
+        app:layout_constraintStart_toStartOf="@+id/vGuideline2"
+       >
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/caloryIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+
+        android:background="@drawable/run_tab_icon"
+        android:backgroundTint="#DC143C"
+        android:contentDescription="save button"
+        app:layout_constraintBottom_toTopOf="@+id/hGuideline2"
+        app:layout_constraintStart_toStartOf="@+id/vGuideline1" />
+
+    <ImageView
+        android:id="@+id/paceIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+
+        android:background="@drawable/ic_baseline_access_time_24"
+        android:backgroundTint="#DC143C"
+        android:contentDescription="save button"
+        app:layout_constraintBottom_toTopOf="@+id/hGuideline5"
+        app:layout_constraintStart_toStartOf="@+id/vGuideline1" />
+
+    <ImageView
+        android:id="@+id/startTimeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+
+        android:background="@drawable/ic_baseline_av_timer_24"
+        android:backgroundTint="#DC143C"
+        android:contentDescription="save button"
+        app:layout_constraintBottom_toTopOf="@+id/hGuideline3"
+        app:layout_constraintStart_toStartOf="@+id/vGuideline1" />
+
+
+    <TextView
+        android:id="@+id/calorieTextViewChangeable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 kcal"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/hGuideline2"
+        app:layout_constraintEnd_toStartOf="@+id/vGuideline3"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/avgPaceTextViewChangeable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0 km/h"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/hGuideline3"
+        app:layout_constraintEnd_toStartOf="@+id/vGuideline3">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/startTimeTextViewChangeable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:00:00"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/hGuideline5"
+
+        app:layout_constraintEnd_toStartOf="@+id/vGuideline3">
+
+    </TextView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
